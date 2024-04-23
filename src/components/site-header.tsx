@@ -46,34 +46,34 @@ export function SiteHeader() {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent className="bg-gray-950 text-gray-50 p-6 md:hidden">
+        <SheetContent className="bg-gray-950 p-6 text-gray-50 md:hidden">
           <div className="flex flex-col gap-6">
             <Link
-              className="text-lg font-medium hover:underline underline-offset-4"
+              className="text-lg font-medium underline-offset-4 hover:underline"
               href="#"
             >
               Home
             </Link>
             <Link
-              className="text-lg font-medium hover:underline underline-offset-4"
+              className="text-lg font-medium underline-offset-4 hover:underline"
               href="#"
             >
               Features
             </Link>
             <Link
-              className="text-lg font-medium hover:underline underline-offset-4"
+              className="text-lg font-medium underline-offset-4 hover:underline"
               href="#"
             >
               Pricing
             </Link>
             <Link
-              className="text-lg font-medium hover:underline underline-offset-4"
+              className="text-lg font-medium underline-offset-4 hover:underline"
               href="#"
             >
               About
             </Link>
             <Link
-              className="text-lg font-medium hover:underline underline-offset-4"
+              className="text-lg font-medium underline-offset-4 hover:underline"
               href="#"
             >
               Contact
