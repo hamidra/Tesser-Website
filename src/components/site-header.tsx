@@ -23,14 +23,19 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
+
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { SheetTrigger, SheetContent, Sheet } from '@/components/ui/sheet'
 import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenu,
 } from '@/components/ui/navigation-menu'
+import { cn } from '@/lib/utils'
+import { Icons } from './icons'
+import { siteConfig } from '@/config/site'
+import { ModeToggle } from './ui/mode-toggle'
 
 export function SiteHeader() {
   return (
@@ -39,6 +44,7 @@ export function SiteHeader() {
         <MountainIcon className="h-6 w-6" />
         <span className="sr-only">Acme Inc</span>
       </Link>
+      {/*
       <Sheet>
         <SheetTrigger asChild>
           <Button className="md:hidden" size="icon" variant="outline">
@@ -125,6 +131,52 @@ export function SiteHeader() {
           </NavigationMenuLink>
         </NavigationMenuList>
       </NavigationMenu>
+      */}
+      <nav className="flex items-center">
+        <div className="mr-8 hidden md:flex">
+          <Link
+            className="flex items-center rounded-sm border border-black px-3 py-1 text-sm font-medium hover:bg-muted"
+            target="_blank"
+            rel="noreferrer"
+            href="https://x.com/layerX"
+          >
+            Join our ecosystem
+          </Link>
+        </div>
+        <nav className="flex items-center">
+          <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+            <div
+              className={cn(
+                buttonVariants({
+                  variant: 'ghost',
+                }),
+                'w-9 px-0',
+              )}
+            >
+              <Icons.gitHub className="h-4 w-4" />
+              <span className="sr-only">GitHub</span>
+            </div>
+          </Link>
+          <Link
+            href={siteConfig.links.twitter}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div
+              className={cn(
+                buttonVariants({
+                  variant: 'ghost',
+                }),
+                'w-9 px-0',
+              )}
+            >
+              <Icons.twitter className="h-3 w-3 fill-current" />
+              <span className="sr-only">Twitter</span>
+            </div>
+          </Link>
+          <ModeToggle />
+        </nav>
+      </nav>
     </header>
   )
 }
