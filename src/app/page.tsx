@@ -10,9 +10,11 @@ export default function Home() {
           <span className="text-nowrap"> Proof Carrying</span> Data
         </h1>
         <h2 className="text-lg">
-          Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
-          suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
-          amet.
+          Effortlessly exchange messages and compose data and state across a
+          diverse range of blockchains through our secure and trustless Proof
+          Carrying Data network. <br /> Utilize our network of PCD verifiers to
+          run permissionless DeFi protocols and DEXs across different
+          blockchains.
         </h2>
       </div>
       <div className="flex items-start justify-center md:w-5/12">
