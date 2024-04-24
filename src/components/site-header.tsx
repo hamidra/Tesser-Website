@@ -34,7 +34,7 @@ import {
 
 export function SiteHeader() {
   return (
-    <header className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
+    <header className="flex items-center justify-between px-4 py-3 md:py-4">
       <Link className="flex items-center gap-2" href="#">
         <MountainIcon className="h-6 w-6" />
         <span className="sr-only">Acme Inc</span>
