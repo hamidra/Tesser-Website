@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: 'LayerX',
-  url: 'https://layerX.xyz',
+  name: 'Tesser',
+  url: 'https://tesser.network',
   ogImage: '',
   description:
     'Seamless cross-chain interoperability via ZK Proof Carrying Data',
   links: {
-    twitter: 'https://x.com/layerX',
-    github: 'https://github.com/layerX',
+    twitter: 'https://twitter.com/tessernet',
+    github: 'https://github.com/tesser',
   },
 }
 

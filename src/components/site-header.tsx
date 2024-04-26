@@ -25,6 +25,7 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { buttonVariants } from '@/components/ui/button'
 import { SheetTrigger, SheetContent, Sheet } from '@/components/ui/sheet'
 import {
@@ -36,13 +37,14 @@ import { cn } from '@/lib/utils'
 import { Icons } from './icons'
 import { siteConfig } from '@/config/site'
 import { ModeToggle } from './ui/mode-toggle'
+import logo from '@/app/logo.png'
 
 export function SiteHeader() {
   return (
     <header className="flex items-center justify-between px-4 py-3 md:py-4">
-      <Link className="flex items-center gap-2" href="#">
-        <MountainIcon className="h-6 w-6" />
-        <span className="sr-only">Acme Inc</span>
+      <Link className="flex h-10 w-10 items-center gap-2" href="#">
+        <Image src={logo} alt="Hypercube tesseract" />
+        <span className="sr-only">Tesser network</span>
       </Link>
       {/*
       <Sheet>
@@ -135,16 +137,16 @@ export function SiteHeader() {
       <nav className="flex items-center">
         <div className="mr-8 hidden md:flex">
           <Link
-            className="flex items-center rounded-sm border border-black px-3 py-1 text-sm font-medium hover:bg-muted"
+            className="flex min-w-28 justify-center rounded-sm border border-black px-3 py-1 text-center text-sm font-medium hover:bg-muted"
             target="_blank"
             rel="noreferrer"
-            href="https://x.com/layerX"
+            href={siteConfig.links.twitter}
           >
-            Join our ecosystem
+            Join us
           </Link>
         </div>
         <nav className="flex items-center">
-          <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+          {/*<Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <div
               className={cn(
                 buttonVariants({
@@ -156,7 +158,7 @@ export function SiteHeader() {
               <Icons.gitHub className="h-4 w-4" />
               <span className="sr-only">GitHub</span>
             </div>
-          </Link>
+          </Link>*/}
           <Link
             href={siteConfig.links.twitter}
             target="_blank"
@@ -174,7 +176,7 @@ export function SiteHeader() {
               <span className="sr-only">Twitter</span>
             </div>
           </Link>
-          <ModeToggle />
+          {/*<ModeToggle />*/}
         </nav>
       </nav>
     </header>
