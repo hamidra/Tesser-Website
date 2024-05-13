@@ -29,7 +29,7 @@ export default function SiteFooter() {
               <span className="sr-only">Discord community</span>
             </a>*/}
             <a
-              href="https://twitter.com/MillPixelDAO"
+              href="https://twitter.com/tessernet"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
