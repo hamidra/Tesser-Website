@@ -6,7 +6,7 @@ export default function Home() {
       <div className="flex flex-col items-start gap-8 text-center md:w-7/12 md:text-start">
         <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl">
           Intuitive <span className="text-nowrap">cross-chain</span>{' '}
-          Interoperability with{' '}
+          Interoperability via{' '}
           <span className="text-nowrap"> Intents & ZK Proofs</span>
         </h1>
         <h2 className="text-lg">
