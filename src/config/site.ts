@@ -6,7 +6,7 @@ export const siteConfig = {
     'Seamless cross-chain interoperability via ZK Proof Carrying Data',
   links: {
     twitter: 'https://twitter.com/tessernet',
-    github: 'https://github.com/tesser',
+    github: 'https://github.com/tesser-labs',
   },
 }
 

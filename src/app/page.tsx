@@ -5,16 +5,17 @@ export default function Home() {
     <section className="flex w-full flex-col gap-10 p-4 md:flex-row md:justify-between md:p-20">
       <div className="flex flex-col items-start gap-8 text-center md:w-7/12 md:text-start">
         <h1 className="text-3xl font-bold lg:text-5xl xl:text-6xl">
-          Seamless <span className="text-nowrap">cross-chain</span>{' '}
-          interoperability via ZK{' '}
-          <span className="text-nowrap"> Proof Carrying</span> Data
+          Intuitive <span className="text-nowrap">cross-chain</span>{' '}
+          Interoperability with{' '}
+          <span className="text-nowrap"> Intents & ZK Proofs</span>
         </h1>
         <h2 className="text-lg">
-          Effortlessly exchange messages and compose data and state across a
-          diverse range of blockchains through our secure and trustless Proof
-          Carrying Data network. <br /> Utilize our network of PCD verifiers to
-          run permissionless DeFi protocols and DEXs across different
-          blockchains.
+          Declare your desired outcome as intents and let our network of agents
+          seamlessly execute cross-chain activities to fulfill them for you,
+          reducing complexities and increasing efficiency. <br /> From asset
+          transfers to inter-blockchain communications, leverage our highly
+          secure intent fulfillment network powered by zero-knowledge proofs for
+          efficient cross-chain protocols and applications.
         </h2>
       </div>
       <div className="flex items-start justify-center md:w-5/12">

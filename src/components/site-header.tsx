@@ -146,7 +146,7 @@ export function SiteHeader() {
           </Link>
         </div>
         <nav className="flex items-center">
-          {/*<Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+          <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <div
               className={cn(
                 buttonVariants({
@@ -155,10 +155,10 @@ export function SiteHeader() {
                 'w-9 px-0',
               )}
             >
-              <Icons.gitHub className="h-4 w-4" />
+              <Icons.gitHub className="h-4 w-4 fill-current" />
               <span className="sr-only">GitHub</span>
             </div>
-          </Link>*/}
+          </Link>
           <Link
             href={siteConfig.links.twitter}
             target="_blank"
