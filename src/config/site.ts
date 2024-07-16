@@ -7,6 +7,7 @@ export const siteConfig = {
   links: {
     twitter: 'https://twitter.com/tessernet',
     github: 'https://github.com/tesser-labs',
+    posts: 'https://api.github.com/repos/tesser-labs/blog/contents/posts/',
   },
 }
 
