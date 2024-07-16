@@ -1,21 +1,18 @@
 import { getPostsMeta } from '@/lib/posts'
-import { siteConfig } from '@/config/site'
-import Link from 'next/link'
-function PostCard({ meta }) {
-  let { slug, title } = meta
-  return (
-    <div>
-      <Link href={`/blog/${slug}`}>{title}</Link>
-    </div>
-  )
-}
-
+import PostCard from '@/components/post-card'
 export default async function PostsList() {
   let postsMeta = await getPostsMeta()
   return (
-    <div>
+    <div className="flex flex-row flex-wrap justify-center gap-8 p-2 md:p-16">
       {postsMeta.map((meta, id) => (
-        <PostCard key={id} meta={meta} />
+        <>
+          <PostCard key={id} meta={meta} />
+          <PostCard key={id} meta={meta} />
+          <PostCard key={id} meta={meta} />
+          <PostCard key={id} meta={meta} />
+          <PostCard key={id} meta={meta} />
+          <PostCard key={id} meta={meta} />
+        </>
       ))}
     </div>
   )
