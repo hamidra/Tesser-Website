@@ -155,7 +155,7 @@ export function SiteHeader() {
                 'w-9 px-0',
               )}
             >
-              <Icons.gitHub className="h-4 w-4 fill-current" />
+              <Icons.gitHub className="h-6 w-6 fill-current" />
               <span className="sr-only">GitHub</span>
             </div>
           </Link>
@@ -172,7 +172,7 @@ export function SiteHeader() {
                 'w-9 px-0',
               )}
             >
-              <Icons.twitter className="h-3 w-3 fill-current" />
+              <Icons.twitter className="h-5 w-5 fill-current" />
               <span className="sr-only">Twitter</span>
             </div>
           </Link>
