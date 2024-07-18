@@ -42,7 +42,7 @@ import logo from '@/app/logo.png'
 export function SiteHeader() {
   return (
     <header className="flex items-center justify-between px-4 py-3 md:py-4">
-      <Link className="flex h-10 w-10 items-center gap-2" href="#">
+      <Link className="flex h-10 w-10 items-center gap-2" href="/">
         <Image src={logo} alt="Hypercube tesseract" />
         <span className="sr-only">Tesser network</span>
       </Link>
