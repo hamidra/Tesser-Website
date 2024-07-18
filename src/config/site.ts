@@ -8,6 +8,8 @@ export const siteConfig = {
     twitter: 'https://twitter.com/tessernet',
     github: 'https://github.com/tesser-labs',
     posts: 'https://api.github.com/repos/tesser-labs/blog/contents/posts/',
+    post_images:
+      'https://raw.githubusercontent.com/tesser-labs/blog/main/posts/',
   },
 }
 
