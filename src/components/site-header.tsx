@@ -26,6 +26,7 @@ To read more about using these font, please visit the Next.js documentation:
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import { buttonVariants } from '@/components/ui/button'
 import { SheetTrigger, SheetContent, Sheet } from '@/components/ui/sheet'
 import {
@@ -36,105 +37,37 @@ import {
 import { cn } from '@/lib/utils'
 import { Icons } from './icons'
 import { siteConfig } from '@/config/site'
-import { ModeToggle } from './ui/mode-toggle'
+import { ModeToggle } from '@/components/ui/mode-toggle'
 import logo from '@/app/logo.png'
 
+function HeaderNavItem({ href, children }) {
+  return (
+    <Link
+      className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-xl font-normal transition-colors hover:cursor-pointer  disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950"
+      href={href}
+    >
+      {children}
+    </Link>
+  )
+}
 export function SiteHeader() {
   return (
     <header className="flex items-center justify-between px-4 py-3 md:py-4">
-      <Link className="flex h-10 w-10 items-center gap-2" href="/">
-        <Image src={logo} alt="Hypercube tesseract" />
+      <Link className="flex w-[200px] items-center gap-2" href="/">
+        <Image src={logo} alt="Hypercube tesseract" className="h-10 w-10" />
         <span className="sr-only">Tesser network</span>
       </Link>
-      {/*
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button className="md:hidden" size="icon" variant="outline">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent className="bg-gray-950 p-6 text-gray-50 md:hidden">
-          <div className="flex flex-col gap-6">
-            <Link
-              className="text-lg font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              Home
-            </Link>
-            <Link
-              className="text-lg font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              Features
-            </Link>
-            <Link
-              className="text-lg font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              Pricing
-            </Link>
-            <Link
-              className="text-lg font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              About
-            </Link>
-            <Link
-              className="text-lg font-medium underline-offset-4 hover:underline"
-              href="#"
-            >
-              Contact
-            </Link>
-          </div>
-        </SheetContent>
-      </Sheet>
       <NavigationMenu className="hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuLink asChild>
-            <Link
-              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-              href="#"
-            >
-              Home
-            </Link>
+            <HeaderNavItem href={'/'}>/Home</HeaderNavItem>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
-            <Link
-              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-              href="#"
-            >
-              Features
-            </Link>
-          </NavigationMenuLink>
-          <NavigationMenuLink asChild>
-            <Link
-              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-              href="#"
-            >
-              Pricing
-            </Link>
-          </NavigationMenuLink>
-          <NavigationMenuLink asChild>
-            <Link
-              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-              href="#"
-            >
-              About
-            </Link>
-          </NavigationMenuLink>
-          <NavigationMenuLink asChild>
-            <Link
-              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-              href="#"
-            >
-              Contact
-            </Link>
+            <HeaderNavItem href={'/blog'}>/Blog</HeaderNavItem>
           </NavigationMenuLink>
         </NavigationMenuList>
       </NavigationMenu>
-      */}
-      <nav className="flex items-center">
+      <nav className="flex flex-1 items-center justify-end md:flex-none">
         <div className="mr-8 hidden md:flex">
           <Link
             className="flex min-w-28 justify-center rounded-sm border border-black px-3 py-1 text-center text-sm font-medium hover:bg-muted"
@@ -179,6 +112,30 @@ export function SiteHeader() {
           {/*<ModeToggle />*/}
         </nav>
       </nav>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button className="md:hidden" size="icon" variant="outline">
+            <MenuIcon className="h-6 w-6" />
+            <span className="sr-only">Toggle navigation menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent className="bg-gray-950 p-6 text-gray-50 md:hidden">
+          <div className="flex flex-col gap-6">
+            <Link
+              className=" font-medium underline-offset-4 hover:underline"
+              href="/"
+            >
+              /Home
+            </Link>
+            <Link
+              className="font-medium underline-offset-4 hover:underline"
+              href="/blog"
+            >
+              /Blog
+            </Link>
+          </div>
+        </SheetContent>
+      </Sheet>
     </header>
   )
 }

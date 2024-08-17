@@ -20,14 +20,14 @@ export async function getPostBySlug(slug: string) {
   return downloadUrl && getPost(downloadUrl)
 }
 
-export async function resolveImage(path: string) {
+export function resolveImage(path: string) {
   let base = siteConfig.links.post_images
   try {
     // check of path is absolute or empty
     let url = path && new URL(`${path}`).href
     return url
   } catch {
-    // if path is relatice resolve it against the base url
+    // if path is relative resolve it against the base url
     let url = path && new URL(`${path}`, base).href
     return url
   }

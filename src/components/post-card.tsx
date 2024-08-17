@@ -4,9 +4,9 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { resolveImage } from '@/lib/posts'
 
-export default async function PostCard({ meta }) {
+export default function PostCard({ meta }) {
   let { author, slug, title, description, hero_image } = meta
-  hero_image = await resolveImage(hero_image)
+  hero_image = resolveImage(hero_image)
   return (
     <>
       <Link href={`/blog/${slug}`}>
