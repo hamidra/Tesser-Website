@@ -1,8 +1,12 @@
 type SVGProps = React.HTMLAttributes<SVGElement>
+import { cn } from '@/lib/utils'
 export const SVG = {
   backdrop1: ({ className, ...props }: SVGProps) => (
     <svg
-      className="absolute left-12 top-0 -z-10 h-[788px] w-[350px] transform-gpu overflow-hidden blur-2xl"
+      className={cn(
+        'absolute left-12 top-0 -z-10 transform-gpu overflow-hidden blur-2xl',
+        className,
+      )}
       viewBox="0 0 468 788"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -51,12 +55,14 @@ export const SVG = {
   ),
   backdrop2: ({ className, ...props }: SVGProps) => (
     <svg
-      className="absolute -right-20 -top-28 -z-10 h-[788px] w-[468px] transform-gpu overflow-hidden blur-2xl"
-      viewBox="0
-0 468 788"
+      className={cn(
+        'absolute -right-20 -top-28 -z-10 transform-gpu overflow-hidden blur-2xl',
+        className,
+      )}
+      viewBox="0 0 468 788"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      id="Windframe_TGD51SLVNN3y"
+      {...props}
     >
       <circle cx="44.5105" cy="378.637" r="156.383" fill="#4A3AFF" />
       <circle cx="119.803" cy="529.24" r="156.383" fill="#702DFF" />
@@ -101,12 +107,14 @@ export const SVG = {
   ),
   backdrop3: ({ className, ...props }: SVGProps) => (
     <svg
-      className="absolute -top-32 right-0 -z-10 h-[610px] w-[200px] transform-gpu overflow-hidden blur-2xl"
-      viewBox="0 0
-468 788"
+      className={cn(
+        'absolute left-12 top-0 -z-10  transform-gpu overflow-hidden blur-2xl',
+        className,
+      )}
+      viewBox="0 0 468 788"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      id="Windframe_WN-a-9KgXpR8"
+      {...props}
     >
       <circle cx="44.5105" cy="378.637" r="156.383" fill="#4A3AFF" />
       <circle cx="119.803" cy="529.24" r="156.383" fill="#702DFF" />
@@ -151,11 +159,14 @@ export const SVG = {
   ),
   backdrop4: ({ className, ...props }: SVGProps) => (
     <svg
-      className="right-88 right-90 right-92 right-93 right-100 absolute right-80 -z-10 h-[400px] w-[600px] overflow-hidden blur-2xl"
+      className={cn(
+        'right-88 right-90 right-92 right-93 right-100 absolute right-80 -z-10  overflow-hidden blur-2xl',
+        className,
+      )}
       viewBox="0 0 468 788"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      id="Windframe_rUEQx8uykgG2"
+      {...props}
     >
       <circle cx="44.5105" cy="378.637" r="156.383" fill="#4A3AFF" />
       <circle cx="119.803" cy="529.24" r="156.383" fill="#702DFF" />

@@ -5,12 +5,23 @@ import Deepmind from '@public/images/deep-mind.jpg'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 
+function FeatureCard({ title, description, icon }) {
+  return (
+    <div className="bg- mx-auto flex max-w-[30rem] flex-col items-center justify-center gap-4 rounded-xl border border-gray-300 bg-white bg-opacity-25 px-10 py-24">
+      <div className="h-16 w-16 rounded-full border bg-white p-3 text-gray-600">
+        {icon}
+      </div>
+      <p className="text-center text-3xl font-medium">{title}</p>
+      <p className="text-center text-gray-600">{description}</p>
+    </div>
+  )
+}
 export default function Home() {
   return (
     <div>
       <div className="relative overflow-hidden">
         <section className="relative isolate mx-auto mt-16 max-w-screen-2xl p-4 pb-20 pt-24">
-          <SVG.backdrop1 />
+          <SVG.backdrop1 className="h-[50vw] w-[40vw]" />
           <div className="mx-auto max-w-2xl">
             <p className="text-center font-medium uppercase tracking-wide text-gray-500">
               AI Economies at Scale
@@ -42,7 +53,7 @@ export default function Home() {
         </section>
       </div>
       <section className="relative isolate mx-auto max-w-screen-2xl overflow-hidden p-4 pb-16 pt-20">
-        <SVG.backdrop2 />
+        <SVG.backdrop2 className="h-[50vw] w-[30vw]" />
         <p className="mb-2 text-center font-medium uppercase tracking-wide text-gray-600">
           Features
         </p>
@@ -56,41 +67,21 @@ export default function Home() {
           operate efficiently and autonomously.
         </p>
         <div className="mx-auto mt-10 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
-          <div className="mx-auto flex max-w-[30rem] flex-col items-center justify-center gap-4 rounded-xl border border-gray-300 bg-white px-10 py-24">
-            <div className="h-16 w-16 rounded-full border bg-white p-3 text-gray-600">
-              <SVG.identity />
-            </div>
-            <p className="text-center text-3xl font-medium">Identity</p>
-            <p className="text-center text-gray-600">
-              Secure and unique digital identities for each AI agent, ensuring
-              authenticity and seamless interactions across platforms.
-            </p>
-          </div>
-          <div className="mx-auto flex max-w-[30rem] flex-col items-center justify-center gap-4 rounded-xl border border-gray-300 bg-white p-10 py-24">
-            <div className="h-16 w-16 rounded-full border bg-white p-3 text-gray-600">
-              <SVG.usdc />
-            </div>
-            <p className="text-center text-3xl font-medium">Payment</p>
-            <p className="text-center text-gray-600">
-              Integrated digital payment solutions that handle transactions
-              effortlessly, supporting multiple payment rails and currencies for
-              smooth financial operations.
-            </p>
-          </div>
-          <div
-            className="mx-auto flex max-w-[30rem] flex-col items-center justify-center gap-4 rounded-xl border border-gray-300
-bg-white p-10 py-24"
-          >
-            <div className="h-16 w-16 rounded-full border bg-white p-3 text-gray-600">
-              <SVG.memory />
-            </div>
-            <p className="text-center text-3xl font-medium">Memory</p>
-            <p className="text-center text-gray-600">
-              Advanced memory systems that enable AI agents to learn, adapt, and
-              retain essential information, enhancing their performance and
-              personalization.
-            </p>
-          </div>
+          <FeatureCard
+            title="Identity"
+            description="Secure and verifiable identities for AI agents, enabling them to interact with other agents and users on the platform."
+            icon={<SVG.identity />}
+          />
+          <FeatureCard
+            title="Payment"
+            description={`Integrated digital payment solutions that handle transactions effortlessly, supporting multiple payment rails and currencies for smooth financial operations.`}
+            icon={<SVG.usdc />}
+          />
+          <FeatureCard
+            title="Memory"
+            description="Advanced memory systems that enable AI agents to learn, adapt, and retain essential information, enhancing their performance and personalization."
+            icon={<SVG.memory />}
+          />
         </div>
       </section>
       <section className="mx-auto max-w-screen-2xl p-2">
@@ -135,57 +126,7 @@ gap-1 text-base font-semibold text-black lg:justify-start"
       </section>
       <section className="bg-white py-20 sm:py-32">
         <div className="relative isolate mx-auto max-w-screen-2xl px-4">
-          <svg
-            className="absolute left-12 top-0 -z-10 h-[788px] w-[350px] transform-gpu overflow-hidden blur-2xl"
-            viewBox="0 0
-468 788"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            id="Windframe_QzgjX5JSzThD"
-          >
-            <circle cx="44.5105" cy="378.637" r="156.383" fill="#4A3AFF" />
-            <circle cx="119.803" cy="529.24" r="156.383" fill="#702DFF" />
-            <circle cx="173.364" cy="372.857" r="156.383" fill="#2D5BFF" />
-            <g filter="url(#filter0_b_1410_520)">
-              <circle
-                cx="73.5409"
-                cy="394.049"
-                r="393.819"
-                fill="white"
-                fill-opacity="0.79"
-              />
-            </g>
-            <defs>
-              <filter
-                x="-460.404"
-                y="-139.896"
-                width="1067.89"
-                height="1067.89"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood
-                  flood-opacity="0"
-                  result="BackgroundImageFix"
-                ></feFlood>
-                <feGaussianBlur
-                  in="BackgroundImageFix"
-                  stdDeviation="70.063"
-                ></feGaussianBlur>
-                <feComposite
-                  in2="SourceAlpha"
-                  operator="in"
-                  result="effect1_backgroundBlur_1410_520"
-                ></feComposite>
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_backgroundBlur_1410_520"
-                  result="shape"
-                ></feBlend>
-              </filter>
-            </defs>
-          </svg>
+          <SVG.backdrop3 className="h-[40vw] w-[30vw]" />
           <div className="mx-auto text-center lg:max-w-4xl">
             <p className="text-center text-sm font-bold uppercase tracking-widest text-gray-600">
               timeline
@@ -204,7 +145,7 @@ gap-1 text-base font-semibold text-black lg:justify-start"
           className="relative isolate overflow-hidden bg-white px-6 py-20 text-center text-black shadow-2xl sm:rounded-3xl
 sm:px-16"
         >
-          <SVG.backdrop4 />
+          <SVG.backdrop4 className="h-[20vw] w-[20vw]" />
           <p className="mx-auto max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
             Join Our Mission to Shape the Future of Scalable AI Economies
           </p>
