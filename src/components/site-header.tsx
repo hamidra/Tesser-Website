@@ -26,6 +26,7 @@ To read more about using these font, please visit the Next.js documentation:
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { SVG } from '@/components/svg'
 import { Button } from '@/components/ui/button'
 import { buttonVariants } from '@/components/ui/button'
 import { SheetTrigger, SheetContent, Sheet } from '@/components/ui/sheet'
@@ -68,7 +69,7 @@ export function SiteHeader() {
         </NavigationMenuList>
       </NavigationMenu>
       <nav className="flex flex-1 items-center justify-end md:flex-none">
-        <div className="mr-8 hidden md:flex">
+        <div className="mr-8 flex">
           <Link
             className="flex min-w-28 justify-center rounded-full border border-black px-3 py-1 text-center font-medium hover:bg-muted"
             rel="noreferrer"
