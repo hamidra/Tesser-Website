@@ -1,5 +1,13 @@
+import nextMDX from '@next/mdx'
+
+const withMDX = nextMDX()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Configure `pageExtensions` to include MDX files
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+
+  // Optionally, add any other Next.js config below
   images: {
     remotePatterns: [
       {
@@ -13,4 +21,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default withMDX(nextConfig)

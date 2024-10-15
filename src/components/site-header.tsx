@@ -70,12 +70,11 @@ export function SiteHeader() {
       <nav className="flex flex-1 items-center justify-end md:flex-none">
         <div className="mr-8 hidden md:flex">
           <Link
-            className="flex min-w-28 justify-center rounded-sm border border-black px-3 py-1 text-center text-sm font-medium hover:bg-muted"
-            target="_blank"
+            className="flex min-w-28 justify-center rounded-full border border-black px-3 py-1 text-center font-medium hover:bg-muted"
             rel="noreferrer"
-            href={siteConfig.links.twitter}
+            href="/vision"
           >
-            Join us
+            Our Vision
           </Link>
         </div>
         <nav className="flex items-center">
