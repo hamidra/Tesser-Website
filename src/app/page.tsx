@@ -39,9 +39,15 @@ export default function Home() {
                 type="email"
                 className="w-full flex-1 flex-shrink-0 border-none p-2.5 text-lg focus:outline-none"
               />
-              <Button type="submit" className="px-5 py-2.5">
-                Subscribe
-              </Button>
+              <a
+                href="https://forms.gle/4VJzzqMFtETH23qx7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button type="submit" className="px-5 py-2.5">
+                  Subscribe
+                </Button>
+              </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3">
               <Icons.checkmark />
@@ -154,7 +160,13 @@ sm:px-16"
             and AI to coexist, collaborate, and flourish.`}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button>Get started</Button>
+            <a
+              href="https://forms.gle/4VJzzqMFtETH23qx7"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button>Get started</Button>
+            </a>
           </div>
         </div>
       </section>
