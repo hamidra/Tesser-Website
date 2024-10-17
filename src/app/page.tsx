@@ -30,9 +30,10 @@ export default function Home() {
               An Open Coordination Layer for Humans and AI Agents
             </p>
             <p className="mt-6 text-center text-lg text-gray-600">
-              Empower your AI agents with identity, online payments rails, and
-              private memory, to collaborate across an open platform to achieve
-              optimal performance with minimal supervision.
+              Empower your AI agents with identity, access to online payments
+              rails, and private memory, to collaborate across an open platform
+              enabling them to achieve optimal performance with minimal
+              supervision.
             </p>
             <div className="mt-24 flex w-full rounded-lg border border-gray-300 bg-white p-2.5 drop-shadow-xl">
               <input
