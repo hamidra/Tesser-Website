@@ -27,25 +27,25 @@ export default function Timeline() {
     <dl className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-y-16 lg:max-w-none">
       <TimelineStep
         number={1}
-        deadline="Q4 2024"
-        title="Identity and Authorization layer"
-        description=""
-      />
-      <TimelineStep
-        number={2}
-        deadline="Q1 2025"
+        deadline="Q1 2024"
         title="Payment & Identity SDKs & App"
         description=""
       />
       <TimelineStep
-        number={3}
+        number={2}
         deadline="Q2 2025"
+        title="Identity and Authorization layer"
+        description=""
+      />
+      <TimelineStep
+        number={3}
+        deadline="Q3 2025"
         title="Development Network & Onboarding"
         description=""
       />
       <TimelineStep
         number={4}
-        deadline="Q3 2025"
+        deadline="Q4 2025"
         title="Testnet Launch"
         description=""
       />
