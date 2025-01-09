@@ -12,7 +12,7 @@
 
 While Large Language Models (LLMs) excel at understanding and generating context-driven data, enabling them to take automated actions requires several key capabilities:
 
-- **Accurate Intent Understanding**: A strength they already possess.
+- **Accurate Intent Understanding**: A strength they already have
 - **Secure Information Retrieval**: Accessing required information from various sources, including personal user data and conversation history (_memory_), while ensuring the privacy and security of user information.
 - **Structured Action Planning**: Generating organized action plans based on interpreted intent and retrieved data.
 - **Action Translation**: Converting each step of the plan into actionable formats (e.g., API calls or web actions).
@@ -53,11 +53,30 @@ A set of emerging technologies has come together which can enable us to offer a 
 - **Encrypted vectorized data availability layers**
 - **Trusted execution environments for key management and privacy**
 
-Tesser equips users with an identity system based on Decentralized Identifiers (DID) and Verifiable Credentials. These mechanisms are designed for multi-agent environments with diverse trust boundaries, leveraging public-private key systems to enable secure delegation of access between agents. Users maintain full control, with the ability to revoke access across devices and services in cases of misbehavior—eliminating the need for external authorities typical of conventional OAUTH/OIDC models. This approach empowers users to securely delegate access to their online accounts while applying granular authorization controls to monitor and manage agent behavior.
+Tesser equips users with an identity system based on Decentralized Identifiers (DID) and Verifiable Credentials. These mechanisms are designed for multi-agent environments with diverse trust boundaries, leveraging public-private key infrastructure to enable secure delegation of access between agents. Users maintain full control, with the ability to revoke access across devices and services in cases of misbehavior, eliminating the need for external authorities typical of conventional OAuth/OIDC models. This approach empowers users to securely delegate access to their online accounts while applying granular authorization controls to monitor and manage agent behavior.
 
-Tesser also includes a secure digital wallet for AI agents, allowing agents to send and recieve money while letting the users in control to allocate budget limits for their agents online payments. Using blockchain-based stablecoins, these wallets enable fast, low-cost transactions with real-time verification, all managed through cryptographic signing. This provides transaction rails that are faster, more secure, and more transparent than traditional banking systems.
+Tesser also includes a secure digital wallet for AI agents, enabling them to manage their identities and handle financial transactions while keeping users in control by allowing budget limits to be set for online payments. Built on blockchain-based stablecoins, these wallets facilitate fast, low-cost transactions with real-time verification, all secured through cryptographic signing. This approach offers transaction rails that are faster, more secure, and more transparent than traditional banking systems.
 
-Additionally, Tesser integrates an AI agent memory layer built on encrypted vectorized data availability layer. This feature allows users to manage their agents’ memory securely, with full control over access. By issuing or revoking verifiable credentials tied to each agent’s identity, users ensure continuity, privacy, and accountability in agent operations.
+Additionally, Tesser integrates an AI agent memory layer built on a vectorized data availability layer. This feature allows users to manage their agents’ memory securely, with full control over access. By issuing or revoking verifiable credentials tied to each agent’s identity, users ensure continuity, privacy, and accountability in agent operations.
+
+To envision how Tesser can provide a universal trust layer in an Agentic economy, following are some example usecase scenarios.
+
+## Example Scenarios
+
+### Secure Resource Sharing
+
+A user onboards their personal AI assistant to Tesser, providing it with a portable digital identity and issuing verifiable credentials to access private information and files. During a workflow, the assistant identifies the need to share specific internal resources with an AI agent from an insurance company to resolve a claim. Using Tesser, the assistant securely issues a verifiable credential to the insurance AI agent, granting temporary access to the necessary files. This process happens seamlessly within the Tesser platform, ensuring the user retains full control over their data. If needed, the user can revoke these credentials instantly through Tesser’s intuitive interface.
+
+### Corporate Agent Onboarding and Cross-Agent Collaboration
+
+A company integrates Tesser into its HR operations to onboard employees and assign them AI agents tailored to their roles. One of the marketing employee’s AI agent needs to collaborate with an external agency’s AI agent to produce artifacts and execute an upcoming campaign. Using Tesser, the marketing agent securely delegates access to internal assets stored in the company’s vault and social media accounts by issuing verifiable credentials. Through Tesser, the marketing agent can also transfer stablecoins as payment or a deposit to the external agent’s digital wallet. The entire process is securely logged on Tesser's data availability layer, and permissions can be revoked or adjusted in real time, ensuring operational security and accountability.
+
+### Streamlined Smart Home Deliveries
+
+A user incorporates Tesser plugin in their smart hub to manage interactions with external agents, such as an Amazon delivery robots. Through Tesser’s platform, the user issues a verifiable credential to the delivery agent, granting temporary one time access to their smart lock. The credential allows the delivery agent to unlock the door and deliver the package securely. Once the delivery is completed, the credential automatically expires, ensuring their home remains secure.
+
+By building Tesser's authentication and authorization layer on top of the an open and interoperable trust layer based on DID and Verifiable Credentials infrastructure, we can enable a wide range of use cases that require secure interactions between agents and users across different personal and enterprise trust domains and devices with seamless integration and security.
+Tesser's decentralized data availability layer and trustless ledger ensure that all partners remain in control, allowing them to monitor access permissions across their chain of trust and securely revoke them at any time in response to misbehavior by internal or external agents. This trustless integrated approach provides robust security and accountability.
 
 </article>
 </div>
