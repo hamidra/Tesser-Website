@@ -53,12 +53,12 @@ function HeaderNavItem({ href, children }) {
 }
 export function SiteHeader() {
   return (
-    <header className="flex items-center justify-between px-4 py-3 md:py-4">
+    <header className="relative flex items-center justify-between px-4 py-3 md:py-4">
       <Link className="flex w-[200px] items-center gap-2" href="/">
         <Image src={logo} alt="Hypercube tesseract" className="h-10 w-10" />
         <span className="sr-only">Tesser network</span>
       </Link>
-      <NavigationMenu className="hidden md:flex">
+      <NavigationMenu className="absolute left-0 right-0 hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuLink asChild>
             <HeaderNavItem href={'/'}>/Home</HeaderNavItem>
@@ -69,7 +69,7 @@ export function SiteHeader() {
         </NavigationMenuList>
       </NavigationMenu>
       <nav className="flex flex-1 items-center justify-end md:flex-none">
-        <div className="mr-8 flex">
+        {/*<div className="mr-8 flex">
           <Link
             className="flex min-w-28 justify-center rounded-full border border-black px-3 py-1 text-center font-medium hover:bg-muted"
             rel="noreferrer"
@@ -77,7 +77,7 @@ export function SiteHeader() {
           >
             Our Vision
           </Link>
-        </div>
+        </div>*/}
         <nav className="flex items-center">
           <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <div

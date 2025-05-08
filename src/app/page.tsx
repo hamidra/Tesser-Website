@@ -131,7 +131,7 @@ gap-1 text-base font-semibold text-black lg:justify-start"
           />
         </div>
       </section>
-      <section className="bg-white py-20 sm:py-32">
+      {/*<section className="bg-white py-20 sm:py-32">
         <div className="relative isolate mx-auto max-w-screen-2xl px-4">
           <SVG.backdrop3 className="h-[40vw] w-[30vw]" />
           <div className="mx-auto text-center lg:max-w-4xl">
@@ -146,7 +146,7 @@ gap-1 text-base font-semibold text-black lg:justify-start"
             <Timeline />
           </div>
         </div>
-      </section>
+      </section>*/}
       <section className="mx-auto max-w-screen-2xl overflow-hidden bg-white px-6 py-20">
         <div
           className="relative isolate overflow-hidden bg-white px-6 py-20 text-center text-black shadow-2xl sm:rounded-3xl
