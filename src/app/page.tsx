@@ -27,13 +27,13 @@ export default function Home() {
               AI Economies at Scale
             </p>
             <p className="mt-2 text-center text-4xl font-bold tracking-tight text-black md:text-6xl">
-              An Open Coordination Layer for Humans and AI Agents
+              An Economic Engine for Autonomous Agents
             </p>
             <p className="mt-6 text-center text-lg text-gray-600">
               Empower your AI agents with identity, access to online payments
-              rails, and private memory, to collaborate across an open platform
-              enabling them to achieve optimal performance with minimal
-              supervision.
+              rails, and an integrated human in the loop system, to collaborate
+              across an open platform enabling them to achieve optimal
+              performance with minimal supervision.
             </p>
             <div className="mt-24 flex w-full rounded-lg border border-gray-300 bg-white p-2.5 drop-shadow-xl">
               <input
@@ -61,18 +61,20 @@ export default function Home() {
       </div>
       <section className="relative isolate mx-auto max-w-screen-2xl overflow-hidden p-4 pb-16 pt-20">
         <SVG.backdrop2 className="h-[50vw] w-[30vw]" />
-        <p className="mb-2 text-center font-medium uppercase tracking-wide text-gray-600">
+        {/*<p className="mb-2 text-center font-medium uppercase tracking-wide text-gray-600">
           Features
-        </p>
+        </p>*/}
         <p className="text-center text-4xl font-bold tracking-tight md:text-6xl">
           Boost Your Agents Productivity
         </p>
         <p className="mx-auto mt-5 text-center text-lg text-gray-600 md:max-w-3xl">
-          Unlock the full potential of your AI agents with our comprehensive
-          suite of features. From secure identities and digital payments to a
-          robust memory layer, our integration layer empowers your agents to
-          operate efficiently and autonomously.
+          Unlock your AI agents’ full potential with our all-in-one integration
+          layer. Leverage secure digital identities and seamless payments,
+          combined with powerful resource management and outcome based dynamic
+          pricing tools. Empower your agents to operate autonomously, streamline
+          operations, and maximize their service revenues.
         </p>
+        {/*
         <div className="mx-auto mt-10 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
           <FeatureCard
             title="Identity"
@@ -90,6 +92,7 @@ export default function Home() {
             icon={<SVG.memory />}
           />
         </div>
+        */}
       </section>
       <section className="mx-auto max-w-screen-2xl p-2">
         <p className="mb-2 text-center font-medium uppercase tracking-wide text-gray-600 lg:text-left">
@@ -109,9 +112,9 @@ export default function Home() {
               them secure digital identities and authorizing access to your data
               and resources. Set up digital wallets for your agents to send and
               receive payments, enabling smooth interactions with other AI
-              agents and human experts. Grant access to your private data and
-              documents by provisioning encrypted memory on Tesser and sharing
-              it with your agents, ensuring data security and privacy.
+              agents and human experts. Let Tesser monitor your resources and
+              implement outcome-based dynamic pricing to boost your Agent's
+              revenue while managing and optimizing operational costs.
               <a
                 href="#"
                 className="ms-4 inline-flex flex-row items-center justify-center
