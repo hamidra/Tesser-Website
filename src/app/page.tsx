@@ -113,7 +113,7 @@ export default function Home() {
               and resources. Set up digital wallets for your agents to send and
               receive payments, enabling smooth interactions with other AI
               agents and human experts. Let Tesser monitor your resources and
-              implement outcome-based dynamic pricing to boost your Agent's
+              implement outcome-based dynamic pricing to boost your Agent&apos;s
               revenue while managing and optimizing operational costs.
               <a
                 href="#"
